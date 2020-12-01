@@ -1,5 +1,6 @@
 body {
     background-color: lightgray;
+    padding: 0px 0px 0px 0px;
 }
 
 #agenda-container {
@@ -32,6 +33,23 @@ body {
     display: inline-block;
 }
 
+#groups-fake {
+    background-color: lightgray;
+    width: 100%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    text-align: center;
+}
+
+#groups-fake-container {
+    background-color: white;
+    border-radius: 5px;
+    float: right;
+    width: 40%;
+    padding: 10px 2% 15px 1%;
+    margin: 1.5% 1% 10px 1%;
+}
+
 .plan {
     padding: 0px 10px 15px 15px;
 }
@@ -44,4 +62,10 @@ body {
 #popup-holder {
     border-radius: 5px;
     padding: 10px 2% 0px 1%;
+}
+
+header {
+    background-color: white;
+    padding: 10px 50px 10px 50px;
+    margin: -10px -10px 5px -10px;
 }

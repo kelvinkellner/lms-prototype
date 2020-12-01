@@ -132,3 +132,12 @@ updateButton.addEventListener("click", function() {
     updatePlansHolder();
     console.log(plans);
 });
+
+$(document).ready(function() {
+    $(window).keydown(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        return false;
+      }
+    });
+  });
