@@ -118,10 +118,12 @@ function updatePlansHolder() {
 
 newPlanButton.addEventListener("click", function() {
     const title = prompt("What is the title for this Plan?");
-    const plan = new Plan(title);   
+    if (title !== null) {
+        const plan = new Plan(title);
 
-    plans.push(plan);
-    updatePlansHolder();
+        plans.push(plan);
+        updatePlansHolder();
+    }
 });
 
 plansHolder.addEventListener("load", updatePlansHolder);
