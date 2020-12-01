@@ -1,0 +1,47 @@
+body {
+    background-color: lightgray;
+}
+
+#agenda-container {
+    background-color: white;
+    border-radius: 5px;
+    float: right;
+    width: 40%;
+    padding: 10px 2% 15px 1%;
+    margin: 10px 1% 10px 1%;
+}
+
+#calendar-container {
+    background-color: white;
+    border-radius: 5px;
+    float: left;
+    width: 50%;
+    padding: 10px 2% 15px 1%;
+    margin: 10px 1% 10px 1%;
+}
+
+#calendar-fake {
+    background-color: lightgray;
+    width: 100%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    text-align: center;
+}
+
+#fake-text {
+    display: inline-block;
+}
+
+.plan {
+    padding: 0px 10px 15px 15px;
+}
+
+.components-list {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#popup-holder {
+    border-radius: 5px;
+    padding: 10px 2% 0px 1%;
+}
