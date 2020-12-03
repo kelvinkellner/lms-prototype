@@ -1,4 +1,4 @@
-const plans = [];
+let plans = [];
 
 const popupHolder = document.getElementById("popup-holder");
 
@@ -43,6 +43,10 @@ function toggleTask(plansIndex, componentIndex, taskIndex) {
     updatePlansHolder();
 }
 
+function clearPopups() {
+    popupHolder.innerHTML = "";
+}
+
 function addComponentSubmit(index) {
     const title = document.getElementById("new-component-title").value;
     const radios = document.getElementsByName("new-component-type");
@@ -64,7 +68,7 @@ function addComponentSubmit(index) {
         console.log("Invalid Component type selected.");
     }
 
-    popupHolder.innerHTML = "";
+    clearPopups();
     updatePlansHolder();
 }
 
@@ -75,10 +79,11 @@ function addComponentPopup(index) {
         <input type="radio" id="note" name="new-component-type" value="note">
         <label for="note">Note</label><br>
         <input type="radio" id="timed-event" name="new-component-type" value="timed-event">
-        <label for="timed-event">Timed Event</label><br>
-        <label for="title">Title (optional)</label>
-        <input type="text" id="new-component-title" value=""><br>
-        <input type="button" value="Add" onclick="addComponentSubmit(${index})"/>
+        <label for="timed-event">Timed Event</label><br><br>
+        <label for="title">Title (optional):</label>
+        <input type="text" id="new-component-title" value=""><br><br>
+        <input type="button" value="Add" onclick="addComponentSubmit(${index})">
+        <input type="button" value="Cancel" onclick="clearPopups()">
         <hr>
     </form>
     `
@@ -93,10 +98,10 @@ function updatePlansHolder() {
             // open
             text += "<div class=\"plan\"><h3 class=\"plan-title\">" + plans[i].title + "</h3>";
             if(plans[i].components.length <= 0) {
-                text += "<button class=\"add-component-button\" onclick=\"addComponentPopup(" + i + ")\">+ Add component</button>";
+                text += "<button class=\"add-component-button\" onclick=\"addComponentPopup(" + i + ")\">+ Add component</button>\n";
             }
-            text += "<button class=\"rename-plan-button\" onclick=\"renamePlan(" + i + ")\">Rename plan</button>";
-            text += "<button class=\"delete-plan-button\" onclick=\"deletePlan(" + i + ")\">Delete plan</button>";
+            text += "<button class=\"rename-plan-button\" onclick=\"renamePlan(" + i + ")\">Rename plan</button>\n";
+            text += "<button class=\"delete-plan-button\" onclick=\"deletePlan(" + i + ")\">Delete plan</button>\n";
             // components   
             if(plans[i].components.length > 0) {
                 text += "<div class=\"components-list\"><br>";
