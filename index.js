@@ -74,6 +74,7 @@ function addComponentSubmit(index) {
 
 function addComponentPopup(index) {
     popupHolder.innerHTML = `<form id="new-component-menu"">
+        <label><strong>New Component...</strong></label><br><br>
         <input type="radio" id="todo-list" name="new-component-type" value="todo-list" checked>
         <label for="todo-list">To-do List</label><br>
         <input type="radio" id="note" name="new-component-type" value="note">
@@ -84,7 +85,7 @@ function addComponentPopup(index) {
         <input type="text" id="new-component-title" value=""><br><br>
         <input type="button" value="Add" onclick="addComponentSubmit(${index})">
         <input type="button" value="Cancel" onclick="clearPopups()">
-        <hr>
+        <br><br><hr>
     </form>
     `
 }
